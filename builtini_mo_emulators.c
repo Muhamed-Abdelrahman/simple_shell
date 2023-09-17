@@ -88,6 +88,6 @@ int __myhelp(info_t *info)
 	arg__array = info->argv;
 	__puts("help call works. Function not yet implemented \n");
 	if (0)
-		__puts(*arg_array); /* temp att_unused workaround */
+		__puts(*arg__array); /* temp att_unused workaround */
 	return (0);
 }

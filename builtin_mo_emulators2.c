@@ -27,7 +27,7 @@ int unset_alias(info_t *info, char *str)
 	if (!pp)
 		return (1);
 	cc = *pp;
-	*p = 0;
+	*pp = 0;
 	rett = delete_node_at_index(&(info->alias),
 		get_node_index(info->alias, node_starts_with(info->alias, str, -1)));
 	*pp = cc;
@@ -101,7 +101,7 @@ int __myalias(info_t *info)
 	}
 	for (ii = 1; info->argv[ii]; ii++)
 	{
-		pp = _strchr(info->argv[ii], '=');
+		pp = __strchr(info->argv[ii], '=');
 		if (pp)
 			set_alias(info, info->argv[ii]);
 		else
