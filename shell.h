@@ -126,36 +126,36 @@ char *find_path(info_t *, char *, char *);
 int loophsh(char **);
 
 /* err_string_functions.c */
-void _eputs(char *);
-int _eputchar(char);
-int _putfd(char c, int fd);
-int _putsfd(char *str, int fd);
+void __eputs(char *);
+int __eputchar(char);
+int __putfd(char c, int fd);
+int __putsfd(char *str, int fd);
 
 /* string_functions.c */
-int _strlen(char *);
-int _strcmp(char *, char *);
+int __strlen(char *);
+int __strcmp(char *, char *);
 char *starts_with(const char *, const char *);
-char *_strcat(char *, char *);
+char *__strcat(char *, char *);
 
 /* string_functions2.c */
-char *_strcpy(char *, char *);
-char *_strdup(const char *);
-void _puts(char *);
-int _putchar(char);
+char *__strcpy(char *, char *);
+char *__strdup(const char *);
+void __puts(char *);
+int __putchar(char);
 
 /* string_functions3.c */
-char *_strncpy(char *, char *, int);
-char *_strncat(char *, char *, int);
-char *_strchr(char *, char);
+char *__strncpy(char *, char *, int);
+char *__strncat(char *, char *, int);
+char *__strchr(char *, char);
 
 /* string_functions4.c */
 char **strtow(char *, char *);
 char **strtow2(char *, char);
 
 /* memory_functions */
-char *_memset(char *, char, unsigned int);
+char *__memset(char *, char, unsigned int);
 void ffree(char **);
-void *_realloc(void *, unsigned int, unsigned int);
+void *__realloc(void *, unsigned int, unsigned int);
 
 /* memory_functions2.c */
 int bfree(void **);
@@ -163,28 +163,28 @@ int bfree(void **);
 /* more_functions.c */
 int interactive(info_t *);
 int is_delim(char, char *);
-int _isalpha(int);
-int _atoi(char *);
+int __isalpha(int);
+int __atoi(char *);
 
 /* more_functions2.c */
-int _erratoi(char *);
+int __erratoi(char *);
 void print_error(info_t *, char *);
 int print_d(int, int);
 char *convert_number(long int, int, int);
 void remove_comments(char *);
 
 /* builtin_emulators.c */
-int _myexit(info_t *);
-int _mycd(info_t *);
-int _myhelp(info_t *);
+int __myexit(info_t *);
+int __mycd(info_t *);
+int __myhelp(info_t *);
 
 /* builtin_emulators2.c */
-int _myhistory(info_t *);
-int _myalias(info_t *);
+int __myhistory(info_t *);
+int __myalias(info_t *);
 
 /* getline.c module */
 ssize_t get_input(info_t *);
-int _getline(info_t *, char **, size_t *);
+int __getline(info_t *, char **, size_t *);
 void sigintHandler(int);
 
 /* info.c module */
@@ -193,16 +193,16 @@ void set_info(info_t *, char **);
 void free_info(info_t *, int);
 
 /* env.c module */
-char *_getenv(info_t *, const char *);
-int _myenv(info_t *);
-int _mysetenv(info_t *);
-int _myunsetenv(info_t *);
+char *__getenv(info_t *, const char *);
+int __myenv(info_t *);
+int __mysetenv(info_t *);
+int __myunsetenv(info_t *);
 int populate_env_list(info_t *);
 
 /* env2.c module */
 char **get_environ(info_t *);
-int _unsetenv(info_t *, char *);
-int _setenv(info_t *, char *, char *);
+int __unsetenv(info_t *, char *);
+int __setenv(info_t *, char *, char *);
 
 /* file_io_functions.c */
 char *get_history_file(info_t *info);
