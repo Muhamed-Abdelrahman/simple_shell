@@ -79,7 +79,7 @@ int print_alias(list_t *node)
 }
 
 /**
- * _myalias - mimics the alias builtin (man alias)
+ * __myalias - mimics the alias builtin (man alias)
  * @info: is var
  *  Return: Always 0
  */
